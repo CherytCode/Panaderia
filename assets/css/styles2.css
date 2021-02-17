@@ -1,0 +1,108 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(235, 235, 235);
+    background-image: url("https://i.ibb.co/vYH6KDq/fondo-web.png");
+
+    /*FUENTE*/
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+
+    /* SCROLL BAR*/
+}
+
+body::-webkit-scrollbar {
+    width: 4px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+    /*display: none; Ocultar scroll */
+}
+
+/* THUMB SCROLL BAR*/
+
+body::-webkit-scrollbar-thumb {
+    background: #8f8a85;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #665d55;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: #58452f;
+}
+
+/* TRACK SCROLLBAR */
+
+body::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+div {
+    display: block;
+}
+
+#seleccion{
+    width: 400px;
+}
+
+#imagen{
+   width: 100%;
+   margin: 0px auto;
+}
+
+#imagen img{
+    width: 400px;
+}
+
+#txt{
+    width: 100%;
+}
+
+#txt p{
+    color: #502e1e;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.opciones{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.opciones select{
+    width: 600px;
+    height: 50px;
+    border: 0px;
+    background-color: #f3ddb6;
+    color: #502e1e;
+    opacity: 80%;
+    font-size: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#BtnIngresar{
+    border: 0px;
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+}

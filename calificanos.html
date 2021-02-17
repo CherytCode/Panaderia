@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>Don Jeisson | Tracking</title>
+        <link rel="icon" type="image/png" href="https://i.ibb.co/2FznQSf/icon.png">
+        <!-- HOJA DE ESTILOS-->
+        <link rel="stylesheet" type="text/css" href="assets/css/styles2.css">
+    </head>
+    <body>
+
+        <!-- Loading CSS -->
+        <style>
+            .loading {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 9999;
+                transition: 1s all;
+                opacity: 0;
+            }
+            .loading.show {
+                opacity: 1;
+            }
+            .loading .spin {
+                border: 3px solid #4f2c1d;
+                border-top-color: #ff671f;
+                border-radius: 50%;
+                width: 3em;
+                height: 3em;
+                animation: spin 1s linear infinite;
+            }
+            @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+            }            
+        </style>
+
+        <!-- Loading HTML -->
+        <div class="loading show">
+            <div class="spin"></div>
+            <p style="color: #4f2c1d;margin-left: 10px;">Cargando...</p>
+        </div>
+
+        <!-- Loading Javascript -->
+        <script>
+        // Loading
+        var Loading=(loadingDelayHidden=0)=>{let loading=null;const myLoadingDelayHidden=loadingDelayHidden;let imgs=[];let lenImgs=0;let counterImgsLoading=0;function incrementCounterImgs(){counterImgsLoading+=1;if(counterImgsLoading===lenImgs){hideLoading()}}function hideLoading(){if(loading!==null){loading.classList.remove('show');setTimeout(function(){loading.remove()},myLoadingDelayHidden)}}function init(){document.addEventListener('DOMContentLoaded',function(){loading=document.querySelector('.loading');imgs=Array.from(document.images);lenImgs=imgs.length;if(imgs.length===0){hideLoading()}else{imgs.forEach(function(img){img.addEventListener('load',incrementCounterImgs,false)})}})}return{'init':init}}
+
+        Loading(1000).init();
+        </script>
+
+        <div>
+            <div id="imagen">
+                <img src="https://i.ibb.co/2FznQSf/icon.png">
+            </div>
+            <br>
+            <div id="txt">
+                <p>Ingresa los siguientes datos</p>
+            </div>
+            <form>
+                <div class="opciones">
+                    <select name="Canal">
+                        <option value="1">Canal</option> 
+                        <option value="2">Domicilios</option> 
+                        <option value="3">Puntos de venta</option> 
+                    </select>
+                </div>
+                <div class="opciones">
+                    <select name="sede">
+                        <option value="1">Sede</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <button id="BtnIngresar" type="submit" style="
+                    background-color: #E1671F;
+                    color: #FFFFFF;">Ingresar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

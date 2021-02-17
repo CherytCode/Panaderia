@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>Cobertura - Don Jeisson</title>
+        <link rel="icon" type="image/png" href="https://i.ibb.co/2FznQSf/icon.png">
+        <!-- HOJA DE ESTILOS-->
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    </head>
+    <body>
+
+        <!-- Loading CSS -->
+        <style>
+            .loading {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 9999;
+                transition: 1s all;
+                opacity: 0;
+            }
+            .loading.show {
+                opacity: 1;
+            }
+            .loading .spin {
+                border: 3px solid #4f2c1d;
+                border-top-color: #ff671f;
+                border-radius: 50%;
+                width: 3em;
+                height: 3em;
+                animation: spin 1s linear infinite;
+            }
+            @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+            }            
+        </style>
+
+        <!-- Loading HTML -->
+        <div class="loading show">
+            <div class="spin"></div>
+            <p style="color: #4f2c1d;margin-left: 10px;">Cargando...</p>
+        </div>
+
+        <!-- Loading Javascript -->
+        <script>
+        // Loading
+        var Loading=(loadingDelayHidden=0)=>{let loading=null;const myLoadingDelayHidden=loadingDelayHidden;let imgs=[];let lenImgs=0;let counterImgsLoading=0;function incrementCounterImgs(){counterImgsLoading+=1;if(counterImgsLoading===lenImgs){hideLoading()}}function hideLoading(){if(loading!==null){loading.classList.remove('show');setTimeout(function(){loading.remove()},myLoadingDelayHidden)}}function init(){document.addEventListener('DOMContentLoaded',function(){loading=document.querySelector('.loading');imgs=Array.from(document.images);lenImgs=imgs.length;if(imgs.length===0){hideLoading()}else{imgs.forEach(function(img){img.addEventListener('load',incrementCounterImgs,false)})}})}return{'init':init}}
+
+        Loading(1000).init();
+        </script>
+
+        <header id="header">
+            <div class="center">
+                <!-- LOGO -->
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="https://i.ibb.co/Ytmy1V9/icon-header2.png" class="app-logo" alt="Logotipo">
+                        </a>
+                    </div>
+
+                <!-- MENU -->
+
+                <!--<nav><ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Quiénes somos</a></li>
+                    <li><a href="#">Servicios</a>
+                        <ul><li><a href="#">Servicio 1</a></li>
+                        <li><a href="#">Servicio 2</a></li>
+                        <li><a href="#">Servicio 3</a></li>
+                        <li><a href="#"></a>Servicio 4</li></ul>
+                        </li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/images/user.png" id="usericon">
+                        </a>
+                    </li>
+                </ul></nav>-->
+
+                <nav id="menu">
+                    <ul >
+                        <li style="cursor: pointer;">
+                                <a href="index.html">Inicio</a>
+                        </li>
+                        <li style="cursor: pointer;" >
+                            <a href="panaderia.html">Panaderia</a>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <a href="pasteleria.html">Pasteleria</a>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <h2>
+                                <a href="domicilios.html">Domicilios</a>
+                                <img src="https://i.ibb.co/42ycPyZ/triangulo.png" style="width: 9px;transform: rotate(45deg);margin-bottom: 5px;">
+                            </h2>
+                            <ul style="cursor: pointer;"> 
+                                <li>
+                                    <a href="domicilios.html">Domicilios</a>    
+                                </li>
+                                <li>
+                                    <a href="cobertura.html">Cobertura</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <a href="ubicanos.html">Ubicanos</a>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <a href="calificanos.html" target="_blank">Calificanos</a>
+                            <img src="https://i.ibb.co/LNpwq2Y/blank.png" id="blank-page">
+                        </li>
+                    </ul>   
+                    <div id="user">
+                        <a href="#">
+                            <img src="https://i.ibb.co/S3nzFzw/user.png" >
+                        </a>
+                    </div>
+                </nav>
+
+                <!-- LIMPIAR FLOTADOS-->
+                <div class="clearfix"></div>
+            </div> 
+        </header>
+
+        <!-- TODOS LOS BR PARA COMPROBAR COMO SE VERIA-->
+
+        <a class='flotante' href='#' ><img src='https://i.ibb.co/mHZqfFL/carrito2.png' border="0"/ title="Tus Compras"></a>
+
+        <br><br><br>
+        <div style="margin-left: 300px;width: 1301px;height: 618px;
+
+        background: rgb(224, 224, 224);
+        border-radius: 9px 9px 9px 9px;
+        border: 1px solid #ccc;
+        ">
+            <h2 style="color: #4f2c1d;text-align: left;font-weight: 700;font-size: 50px;margin-left: 10px;">Cobertura</h2>
+            <iframe src="https://www.google.com/maps/d/embed?mid=14JNef2N3SANrTdfMJchBIGu6qus21RYM&hl=es-419" width="1300px" height="550px" style="border: 1px solid #ccc;border-radius: 0px 0px 9px 9px;"></iframe>
+        </div>
+
+        <br>
+
+        <footer id="footer" style="
+        -webkit-box-shadow: inset 0px 4px 19px 0px rgba(0,0,0,0.66);
+        -moz-box-shadow: inset 0px 4px 19px 0px rgba(0,0,0,0.66);
+        box-shadow: inset 0px 4px 19px 0px rgba(0,0,0,0.66);">
+            <div id="espaciado">
+                <div id="redes-footer">
+                    <h2>Nuestras Redes</h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/Cheryt-110029623883252/" target="_blank" alt="Facebook" title="Siguenos en Facebook">
+                                <img src="https://i.ibb.co/M8NJwwP/facebook.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/Cheryt17" target="_blank" alt="Twitter" title="Siguenos en Twitter">
+                                <img src="https://i.ibb.co/J54H11L/twitter.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/cheryt.art/"  target="_blank"alt="Instagram" title="Siguenos en Instagram">
+                                <img src="https://i.ibb.co/nBFq3rx/instagram.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+573213009207" alt="WhatsApp" title="Escribenos por WhatsApp">
+                                <img src="https://i.ibb.co/4TQwDdL/whatsapp.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://co.pinterest.com/CherytUwU/_saved/" target="_blank" alt="pinterest" title="Encuentranos en Pinterest">
+                                <img src="https://i.ibb.co/xMcp071/pinterest.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="marca"> 
+                    <img src="https://i.ibb.co/0KT8JHC/desarrollado.png">
+                </div>
+
+                <div >
+                    <form>
+                        <input type="text" name="correo" placeholder="Ingresa tu correo y recibe nestro boletín" id="correo-footer">
+                        <input type="submit" name="submit" value="Enviar" class="btn" style="cursor:pointer">
+                    </form>
+                </div>  
+            </div>
+
+            <div class="clearfix"></div>
+
+            <hr>
+
+            <div class="clearfix"></div>
+
+            <div id="footer-footer">
+                <div id="nuestra-empresa-footer">
+                    <ul>
+                        <li>
+                            <h2>Nuestra Empresa</h2>
+                        </li>
+                            <hr style="margin-bottom: 5px;border: 1px solid rgb(155, 155, 155);">
+                        <li>
+                            <a href="#">Quienes Somos?</a>
+                        </li>
+                        <li>
+                            <a href="#">Únete</a>
+                        </li>
+                        <li>
+                            <a href="#">Nuestros Productos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="servicio-cliente-footer">
+                    <ul>
+                        <li>
+                            <h2>Servicio Al Cliente</h2>
+                        </li>
+                            <hr style="margin-bottom: 5px;border: 1px solid rgb(155, 155, 155);">
+                        <li>
+                            <a href="#">Descripcion Del Servicio</a>
+                        </li>
+                        <li>
+                            <a href="#">Politicas De Despacho</a>
+                        </li>
+                        <li>
+                            <a href="#">Sistema De Pagos e Impuestos</a>
+                        </li>
+                        <li>
+                            <a href="#">Politicas De Privacidad e Información</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="contactarnos-footer">
+                    <ul>
+                        <li>
+                            <h2>Contactanos</h2>
+                        </li>
+                            <hr style="margin-bottom: 5px;border: 1px solid rgb(155, 155, 155);">
+                        <li>
+                            <a href="#">Envianos Un Mensaje</a>
+                        </li>
+                        <li>
+                            <a href="#">Oficinas Principales</a>
+                        </li>
+                        <li>
+                            <a href="#">Sucursales</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="copy"> &copy; Don Jeisson | Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>
